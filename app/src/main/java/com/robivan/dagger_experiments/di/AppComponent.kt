@@ -1,8 +1,10 @@
 package com.robivan.dagger_experiments.di
 
+import android.content.Context
 import com.robivan.dagger_experiments.data.api.ServerApi
 import com.robivan.dagger_experiments.view.MainActivity
 import com.robivan.dagger_experiments.view.MainActivityPresenter
+import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Named
 
@@ -18,6 +20,7 @@ interface AppComponent {
     @Component.Builder
     interface AppCompBuilder {
         fun buildAppComp(): AppComponent
-        fun appModule(appModule: AppModule): AppCompBuilder
+        @BindsInstance
+        fun context(context: Context): AppCompBuilder
     }
 }
