@@ -14,4 +14,10 @@ interface AppComponent {
     fun getServerApiProd(): ServerApi
     @Named("dev")
     fun getServerApiDev(): ServerApi
+
+    @Component.Builder
+    interface AppCompBuilder {
+        fun buildAppComp(): AppComponent
+        fun appModule(appModule: AppModule): AppCompBuilder
+    }
 }

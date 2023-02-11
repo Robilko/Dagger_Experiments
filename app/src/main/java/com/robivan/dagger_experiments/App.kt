@@ -9,5 +9,5 @@ class App : Application() {
     val appComponent = DaggerAppComponent
         .builder()
         .appModule(AppModule(this))
-        .build()
+        .buildAppComp()
 }
