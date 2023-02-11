@@ -17,10 +17,15 @@ interface AppComponent {
     @Named("dev")
     fun getServerApiDev(): ServerApi
 
-    @Component.Builder
-    interface AppCompBuilder {
-        fun buildAppComp(): AppComponent
-        @BindsInstance
-        fun context(context: Context): AppCompBuilder
+//    @Component.Builder
+//    interface AppCompBuilder {
+//        fun buildAppComp(): AppComponent
+//        @BindsInstance
+//        fun context(context: Context): AppCompBuilder
+//    }
+
+    @Component.Factory
+    interface AppCompFactory {
+        fun create(@BindsInstance context: Context, networkModule: NetworkModule):AppComponent
     }
 }
