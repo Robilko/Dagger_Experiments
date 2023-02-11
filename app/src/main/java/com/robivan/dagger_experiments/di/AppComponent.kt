@@ -6,7 +6,7 @@ import com.robivan.dagger_experiments.view.MainActivityPresenter
 import dagger.Component
 import javax.inject.Named
 
-@Component(modules = [StorageModule::class, NetworkModule::class, MainModule::class])
+@Component(modules = [NetworkModule::class, AppModule::class, StorageModule::class])
 interface AppComponent {
     fun injectMainActivity(mainActivity: MainActivity)
     fun getMainActivityPresenter(): MainActivityPresenter
