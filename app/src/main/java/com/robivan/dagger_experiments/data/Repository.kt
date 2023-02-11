@@ -1,5 +1,7 @@
 package com.robivan.dagger_experiments.data
 
-class Repository {
+import javax.inject.Inject
+
+class Repository @Inject constructor() {
 
 }

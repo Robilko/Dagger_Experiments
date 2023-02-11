@@ -1,4 +1,6 @@
 package com.robivan.dagger_experiments.data
 
-class NetworkUtils(private val connectionManager: ConnectionManager) {
+import javax.inject.Inject
+
+class NetworkUtils @Inject constructor(private val connectionManager: ConnectionManager) {
 }

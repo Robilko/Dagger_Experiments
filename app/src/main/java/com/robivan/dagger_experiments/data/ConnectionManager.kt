@@ -1,5 +1,7 @@
 package com.robivan.dagger_experiments.data
 
-class ConnectionManager {
+import javax.inject.Inject
+
+class ConnectionManager @Inject constructor() {
 
 }

@@ -10,12 +10,6 @@ import javax.inject.Named
 @Module
 class NetworkModule {
 
-    @Provides
-    fun provideNetworkUtils(connectionManager: ConnectionManager): NetworkUtils = NetworkUtils(connectionManager)
-
-    @Provides
-    fun provideConnectionManager(): ConnectionManager = ConnectionManager()
-
     @Named("prod")
     @Provides
     fun provideServerApiProd(): ServerApi = ServerApi("prod.server.com")
